@@ -3,7 +3,7 @@
 HapMLST is a pipeline that processes metagenomic data using EM algorithms and applies the allele sequence variants to quickly and accurately assess the abundance and ST type of bacteria based MLST classification.
 
 ## Pipeline
-
+![image](https://github.com/Chen-Lab123/HapMLST/blob/main/pipeline/Figure1.tif)
 
 ## Installation
 ### 1. install with docker??
