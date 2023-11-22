@@ -1,4 +1,4 @@
-###ecoli
+###以ecoli为例
 
 ##01.利用mlst软件整理的MLST_database序列信息，进行复制，得到7个管家基因序列文件(*.tfa);profile文件(*.txt)
 cp -r /datapool/software/anaconda3/envs/mlst/db/pubmlst/ecoli ./hapMLST_db/
