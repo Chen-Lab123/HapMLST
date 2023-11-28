@@ -1,0 +1,9 @@
+echo -n ./Acinetobacter_baumannii/profiles.mat;less ./Acinetobacter_baumannii/profiles.mat |awk '{print NF}'|head -1
+echo -n ./Enterococcus_faecalis/profiles.mat;less ./Enterococcus_faecalis/profiles.mat |awk '{print NF}'|head -1
+echo -n ./Enterococcus_faecium/profiles.mat;less ./Enterococcus_faecium/profiles.mat |awk '{print NF}'|head -1
+echo -n ./Escherichia_coli/profiles.mat;less ./Escherichia_coli/profiles.mat |awk '{print NF}'|head -1
+echo -n ./Klebsiella_pneumoniae/profiles.mat;less ./Klebsiella_pneumoniae/profiles.mat |awk '{print NF}'|head -1
+echo -n ./Pseudomonas_aeruginosa/profiles.mat;less ./Pseudomonas_aeruginosa/profiles.mat |awk '{print NF}'|head -1
+echo -n ./Staphylococcus_aureus/profiles.mat;less ./Staphylococcus_aureus/profiles.mat |awk '{print NF}'|head -1
+echo -n ./Staphylococcus_epidermidis/profiles.mat;less ./Staphylococcus_epidermidis/profiles.mat |awk '{print NF}'|head -1
+echo -n ./Streptococcus_pneumoniae/profiles.mat;less ./Streptococcus_pneumoniae/profiles.mat |awk '{print NF}'|head -1
