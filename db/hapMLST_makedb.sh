@@ -1,11 +1,10 @@
 ###以ecoli为例
 
-##01.利用mlst软件整理的MLST_database序列信息，进行复制，得到7个管家基因序列文件(*.tfa);profile文件(*.txt)
-cp -r /datapool/software/anaconda3/envs/mlst/db/pubmlst/ecoli ./hapMLST_db/
+##01.利用mlst软件整理的MLST_database序列信息，得到7个管家基因序列文件(*.tfa);profile文件(*.txt)
 
 ##02.确定该物种的参考基因组：优先选择complete genome
-cd ./hapMLST_db/ecoli
-less /datapool/db/complete_genome/refseq_complete.list |grep 'Escherichia coli'>refer_genome_download.info
+cd ./pubmlst/ecoli
+less ./db/refseq_complete.list |grep 'Escherichia coli'>refer_genome_download.info
 wget -c ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/005/845/GCA_000005845.2_ASM584v2/GCA_000005845.2_ASM584v2_genomic.fna.gz
 gunzip GCA_000005845.2_ASM584v2_genomic.fna.gz
 mv GCA_000005845.2_ASM584v2_genomic.fna ref.fna
