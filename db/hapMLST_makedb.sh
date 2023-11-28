@@ -3,11 +3,12 @@
 ##01.利用mlst软件整理的MLST_database序列信息，得到7个管家基因序列文件(*.tfa);profile文件(*.txt)
 
 ##02.确定该物种的参考基因组：优先选择complete genome
-cd ./pubmlst/ecoli
-less ./db/refseq_complete.list |grep 'Escherichia coli'>refer_genome_download.info
-wget -c ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/005/845/GCA_000005845.2_ASM584v2/GCA_000005845.2_ASM584v2_genomic.fna.gz
-gunzip GCA_000005845.2_ASM584v2_genomic.fna.gz
-mv GCA_000005845.2_ASM584v2_genomic.fna ref.fna
+cd ./db/pubmlst/ecoli
+less ../../refseq_complete.list |grep 'Escherichia coli'>refer_genome_download.info
+less refer_genome_download.info|awk -F"/" '{print "wget -c "$0}' >wget.sh
+sh wget.sh 
+less refer_genome_download.info|awk -F"/" '{print "mv "$NF" ref.fna"}'>mv.sh
+sh mv.sh
 
 ##03.构建hapMLST_db
 mv *.txt profiles_ST.txt
